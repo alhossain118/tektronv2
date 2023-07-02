@@ -1,0 +1,18 @@
+<section class=" pb-0 position-relative overflow">
+    <div class="platform-position">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h4 class="mb-4">Choose Your Platform</h4>
+                    <div class="bg-img-platform left ">
+                        <div *ngFor="let list of List;let i = index" class="wow zoomIn d-inline {{ List.length - 1 > i  ? 'mr-3' : '' }}" data-wow-delay="0.2s">
+                            <a href="{{ list.href }}">
+                                <img class="{{ list.class }}" src="{{ list.image }}" alt="image{{i}}">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,18 @@
+<section id="iq-service">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <app-v-two-section-title [titleSectionProp]="titleSectionProp"></app-v-two-section-title>
+            </div>
+            <div *ngFor="let list of List" class="col-lg-3">
+                <div class="box-effect-two  wow fadeInUp text-left feature-box-effect {{ list.active !== undefined && list.active ? 'selected' : '' }} ">
+                    <div class="icon-box">
+                        <div class="img-effect mb-4"><img src="{{ list.image }}" alt="fancybox"></div>
+                        <h5 class="mb-2">{{ list.title }}</h5>
+                        <p class="mb-0">{{ list.desc }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

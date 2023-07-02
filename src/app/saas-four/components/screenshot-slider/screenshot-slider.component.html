@@ -1,0 +1,17 @@
+<section class="pt-5">
+    <div class="col-sm-12">
+        <div class="screenshots-slider popup-gallery">
+            <div class="slider-container">
+                <div class="slider-content">
+                    <div *ngFor="let list of List;let i = index" class="slider-single {{ list.class }}">
+                        <a href="#" class="popup-img">
+                            <img class="slider-single-image" src="{{ list.image }}" alt="{{ i }}">
+                        </a>
+                    </div>
+                </div>
+                <a class="slider-left" (click)="swipeLeft()" href="javascript:void(0);"><i class="fa fa-angle-left"></i></a>
+                <a class="slider-right" (click)="swipeRight()" href="javascript:void(0);"><i class="fa fa-angle-right"></i></a>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,25 @@
+<section class="pt-0">
+    <div class="container">
+        <div class="row full-img-left">
+            <div class="col-lg-6 mb-5 mb-lg-0 ">
+                <img src="./assets/sofbox-v2/images/home-8/904.png" class="img-fluid" alt="blogimage1">
+            </div>
+            <div class="col-lg-6">
+                <app-v-two-section-title [titleSectionProp]="titleSectionProp"></app-v-two-section-title>
+                <div class="row">
+                    <div *ngFor="let list of List;let i = index" class="col-lg-4">
+                        <div class="sox-services {{ list.hoverClass }}">
+                            <div class="sox-icon">
+                                <i aria-hidden="true" class="{{ list.icon }}"></i>
+                                <h6 class="text-hover">{{ list.title }}</h6>
+                            </div>
+                            <div class="service-number">
+                                <span>{{ i + 1 }}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,26 @@
+<section id="iq-testimonial" class="pb-0">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <img src="./assets/sofbox-v2/images/home-8/909.png" class="img-fluid" alt="blogimage1">
+            </div>
+            <div class="col-lg-6">
+                <app-v-two-section-title [titleSectionProp]="titleSectionProp"></app-v-two-section-title>
+                <div class="owl-carousel our-testimonial style-three" data-autoplay="true" data-loop="true" data-nav="false" data-dots="true" data-items="1" data-items-laptop="1" data-items-tab="1" data-items-mobile="1" data-items-mobile-sm="1">
+                    <div *ngFor="let list of List" class="item text-left">
+                        <div class="iq-testimonial">
+                            <div class="testimonial-info mb-4">
+                                <img alt="#" class="img-fluid rounded-circle" src="{{ list.image }}">
+                                <div class="testimonial-name">
+                                    <h5>{{ list.title }}</h5>
+                                    <span class="sub-title">{{ list.subtitle }}</span>
+                                </div>
+                            </div>
+                            <p>{{ list.desc }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

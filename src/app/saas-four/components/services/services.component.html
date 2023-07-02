@@ -1,0 +1,29 @@
+<section class="pt-0">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <app-v-two-section-title [titleSectionProp]="titleSectionProp"></app-v-two-section-title>
+            </div>
+        </div>
+        <div class="row">
+            <div *ngFor="let list of List" class="col-lg-6">
+                <div class="Service-box text-left">
+                    <div class="container">
+                        <div class="row row-eq-height align-items-center">
+                            <div class="col-sm-4">
+                                <img src="{{ list.image }}" alt="fancybox">
+                            </div>
+                            <div class="col-sm-8">
+                                <div class="content">
+                                    <h5 class="mb-2">{{ list.title }}</h5>
+                                    <p class="mb-4">{{ list.description }}</p>
+                                    <a class="blue-btn button" href="#">{{ list.linkText }}</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

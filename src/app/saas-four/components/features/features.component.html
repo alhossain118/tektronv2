@@ -1,0 +1,35 @@
+<section class="pb-0" id="iq-feature">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="conatiner Sofbox-tab verticaltab">
+					<div class="row align-items-center flex-row-reverse">
+						<div class="col-lg-6 tabContent">
+							<div *ngFor="let list of tabList" id="{{ list.id }}" class="tab-pane fade {{ list.active !== undefined && list.active ? 'active show' : '' }}">
+								<div class="text-left">
+									<img src="{{ list.tabImage }}" class="img-fluid" alt="img">
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-6">
+                            <app-v-two-section-title [titleSectionProp]="titleSectionProp"></app-v-two-section-title>
+							<div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+								<a *ngFor="let list of tabList" class="nav-link {{ list.active !== undefined && list.active ? 'active show' : '' }}" data-toggle="pill" (click)="tabActive(list.id)"  href="{{ '#' + list.id }}" role="tab" [attr.aria-selected]=" list.active !== undefined ? true : false ">
+									<div class="saas-works-box">
+										<div class="media">
+											<img class="align-self-center mr-3" src="{{ list.image }}" alt="tab-image">
+											<div class="media-body">
+												<h5 class="mb-2 active-title">{{ list.title }}</h5>
+												<p class="mb-0">{{ list.description }}</p>
+											</div>
+										</div>
+									</div>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

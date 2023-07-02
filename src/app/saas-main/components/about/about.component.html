@@ -1,0 +1,43 @@
+<section class="pt-0 sofbox-fullrside-img">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <app-v-two-section-title [titleSectionProp]="titleSectionProp"></app-v-two-section-title>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="text-left">
+                            <ul class="iq-list wow fadeInUp">
+                                <li *ngFor="let service of service1"><i class="fa fa-check"></i><span>{{ service.title }} </span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="text-left">
+                            <ul class="iq-list wow fadeInUp">
+                                <li *ngFor="let service of service2"><i class="fa fa-check"></i><span>{{ service.title }} </span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <a class="button gradient-btn button-icon mt-5" href="#"><span class="btn-effect"> Read More</span></a>
+            </div>
+            <div class="col-lg-6 mt-5 mt-lg-0">
+                <div *ngFor="let list of List;let i = index" class="color-palette wow fadeInUp text-left {{ i == 1 ? 'ml-lg-5 ml-0' : 'mr-lg-5 mr-0 ' }} {{ list.hoverClass }}">
+                    <div class="media">
+                        <div class="circle-icon">
+                            <i aria-hidden="true" class="{{ list.icon }}"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="color-text mb-2">{{ list.title }}</h4>
+                            <p class="mb-0">{{ list.description }}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="layer_wrap iq-objects  style-one right-top"><span class="iq-objects-01">
+                    <img src="./assets/sofbox-v2/images/home-4/400.png" alt="drive02">
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

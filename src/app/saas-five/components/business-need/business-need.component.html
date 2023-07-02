@@ -1,0 +1,23 @@
+<section class="pt-0 pb-0">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <app-v-two-section-title [titleSectionProp]="titleSectionProp"></app-v-two-section-title>
+                <div *ngFor="let list of List" class="fancy-icon wow fadeInUp text-left">
+                    <div class="media">
+                        <div class="fancy-img">
+                            <img src="{{ list.image }}" alt="fancybox">
+                        </div>
+                        <div class="media-body">
+                            <h5 class="mt-0">{{ list.title }}</h5>
+                            <p class="mb-0">{{ list.desc }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <img src="./assets/sofbox-v2/images/home-8/907.png" alt="fancybox">
+            </div>
+        </div>
+    </div>
+</section>
